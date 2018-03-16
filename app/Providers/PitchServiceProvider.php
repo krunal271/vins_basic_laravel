@@ -1,9 +1,9 @@
 <?php
 
-namespace Laraspace\Providers;
+namespace euro_hms\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Laraspace\Services\PitchService;
+use euro_hms\Services\PitchService;
 
 class PitchServiceProvider extends ServiceProvider
 {
@@ -23,7 +23,7 @@ class PitchServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Laraspace\Contracts\PitchContract', function ($app) {
+        $this->app->bind('euro_hms\Contracts\PitchContract', function ($app) {
             return new PitchService();
         });
     }
@@ -35,6 +35,6 @@ class PitchServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Laraspace\Contracts\PitchContract'];
+        return ['euro_hms\Contracts\PitchContract'];
     }
 }

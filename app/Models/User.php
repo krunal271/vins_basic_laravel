@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Models;
+namespace euro_hms\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Contracts\Auth\CanResetPassword;
-use Laraspace\Notifications\MyOwnResetPassword as ResetPasswordNotification;
-use Laraspace\Models\UserOtp;
+use euro_hms\Notifications\MyOwnResetPassword as ResetPasswordNotification;
+use euro_hms\Models\UserOtp;
 
 class User extends Authenticatable implements HasRoleAndPermissionContract, CanResetPassword
 {
@@ -99,7 +99,7 @@ class User extends Authenticatable implements HasRoleAndPermissionContract, CanR
      */
     public function profile()
     {
-        return $this->belongsTo('Laraspace\Models\Person', 'person_id');
+        return $this->belongsTo('euro_hms\Models\Person', 'person_id');
     }
 
     /**
@@ -141,7 +141,7 @@ class User extends Authenticatable implements HasRoleAndPermissionContract, CanR
      */
     public function personDetail()
     {
-        return $this->belongsTo('Laraspace\Models\Person', 'person_id');
+        return $this->belongsTo('euro_hms\Models\Person', 'person_id');
     }
     /**
      * Send the password reset notification.
@@ -175,16 +175,16 @@ class User extends Authenticatable implements HasRoleAndPermissionContract, CanR
     }
     public function settings()
     {
-        return $this->hasOne('Laraspace\Models\Settings', 'user_id');
+        return $this->hasOne('euro_hms\Models\Settings', 'user_id');
     }
 
     public function defaultFavouriteTournament()
     {
-        return $this->hasMany('Laraspace\Models\UserFavourites', 'user_id')->where('is_default', 1);
+        return $this->hasMany('euro_hms\Models\UserFavourites', 'user_id')->where('is_default', 1);
     }
 
     public function tournaments()
     {
-        return $this->belongsToMany('Laraspace\Models\Tournament', 'tournament_user', 'user_id','tournament_id');
+        return $this->belongsToMany('euro_hms\Models\Tournament', 'tournament_user', 'user_id','tournament_id');
     }
 }

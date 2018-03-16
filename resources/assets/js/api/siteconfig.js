@@ -5,7 +5,7 @@ import axios from 'axios'
 // EndPoint API
 
 var instance = axios.create({
-  baseURL: 'http://localhost/eurosport/public/api/',
+  baseURL: 'http://127.0.0.1:8000/api/',
   timeout: 50000
 })
 /*

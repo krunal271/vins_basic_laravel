@@ -1,9 +1,9 @@
 <?php
 
-namespace Laraspace\Providers;
+namespace euro_hms\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Laraspace\Services\MatchService;
+use euro_hms\Services\MatchService;
 
 class MatchServiceProvider extends ServiceProvider
 {
@@ -23,7 +23,7 @@ class MatchServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Laraspace\Contracts\MatchContract', function ($app) {
+        $this->app->bind('euro_hms\Contracts\MatchContract', function ($app) {
             return new MatchService();
         });
     }
@@ -35,6 +35,6 @@ class MatchServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Laraspace\Contracts\MatchContract'];
+        return ['euro_hms\Contracts\MatchContract'];
     }
 }

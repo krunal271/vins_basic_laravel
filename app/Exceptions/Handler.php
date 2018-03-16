@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Exceptions;
+namespace euro_hms\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

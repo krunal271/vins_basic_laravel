@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Api\Controllers;
+namespace euro_hms\Api\Controllers;
 
 use Brotzka\DotenvEditor\DotenvEditor;
 use Dingo\Api\Routing\Helpers;
@@ -8,12 +8,12 @@ use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 
 // Need to Define Only Contracts
-use Laraspace\Api\Contracts\UserContract;
+use euro_hms\Api\Contracts\UserContract;
 use JWTAuth;
-use Laraspace\Models\User;
-use Laraspace\Models\Role;
-use Laraspace\Api\Repositories\UserRepository;
-use Laraspace\Custom\Helper\Common;
+use euro_hms\Models\User;
+use euro_hms\Models\Role;
+use euro_hms\Api\Repositories\UserRepository;
+use euro_hms\Custom\Helper\Common;
 
 /**
  * Users Resource Description.

@@ -1,12 +1,12 @@
 <?php
 
-namespace Laraspace\Notifications;
+namespace euro_hms\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Laraspace\Notifications\Messages\MailMessage;
-use Laraspace\Models\User;
+use euro_hms\Notifications\Messages\MailMessage;
+use euro_hms\Models\User;
 
 class MyOwnResetPassword extends Notification
 {

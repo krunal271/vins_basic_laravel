@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Eurosport',
+    'name' => 'HMS',
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://127.0.0.1:8000'),
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'Europe/London',
+    'timezone' => 'Asia/Kolkata',
 
     /*
     |--------------------------------------------------------------------------
@@ -169,51 +169,22 @@ return [
         /*
          * Application Service Providers...
          */
-        Laraspace\Providers\AppServiceProvider::class,
-        Laraspace\Providers\AuthServiceProvider::class,
-//        Laraspace\Providers\BroadcastServiceProvider::class,
-        Laraspace\Providers\EventServiceProvider::class,
-        Laraspace\Providers\RouteServiceProvider::class,
+        euro_hms\Providers\AppServiceProvider::class,
+        euro_hms\Providers\AuthServiceProvider::class,
+//        euro_hms\Providers\BroadcastServiceProvider::class,
+        euro_hms\Providers\EventServiceProvider::class,
+        euro_hms\Providers\RouteServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         // Laracasts\Flash\FlashServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Dingo\Api\Provider\LaravelServiceProvider::class,
-        // Duro85\Roles\RolesServiceProvider::class,
-        // Maatwebsite\Excel\ExcelServiceProvider::class,
-        // Intervention\Image\ImageServiceProvider::class,
-        // Toin0u\Geotools\GeotoolsServiceProvider::class,
-        // Geocoder\Laravel\Providers\GeocoderService::class,
-        // LaravelFCM\FCMServiceProvider::class,
-
+        Duro85\Roles\RolesServiceProvider::class,
+ 
         /*
          *  Custom Service Providers
          */
-        // Laraspace\Providers\UserServiceProvider::class,
-        // Laraspace\Providers\TeamServiceProvider::class,
-        // Laraspace\Providers\AgeGroupServiceProvider::class,
-        // Laraspace\Providers\RefereeServiceProvider::class,
-        // Laraspace\Providers\MatchServiceProvider::class,
-        // Laraspace\Providers\TournamentServiceProvider::class,
-        // Laraspace\Providers\ApiServiceProvider::class,
-        // Laraspace\Providers\PitchServiceProvider::class,
         // Barryvdh\Snappy\ServiceProvider::class,
-
-        /*
-         *  Api Service Providers
-         */
-        Laraspace\Api\Providers\UserServiceProvider::class,
-        Laraspace\Api\Providers\TeamServiceProvider::class,
-        Laraspace\Api\Providers\AgeGroupServiceProvider::class,
-        Laraspace\Api\Providers\RefereeServiceProvider::class,
-        Laraspace\Api\Providers\MatchServiceProvider::class,
-        Laraspace\Api\Providers\TournamentServiceProvider::class,
-        Laraspace\Api\Providers\PitchServiceProvider::class,
-        Laraspace\Api\Providers\RoleServiceProvider::class,
-        Laraspace\Api\Providers\VenueServiceProvider::class,
-
-
-
-    ],
+   ],
 
     /*
     |--------------------------------------------------------------------------
@@ -261,6 +232,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
-    ],
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+   ],
 
 ];

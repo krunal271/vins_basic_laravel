@@ -1,10 +1,10 @@
 <?php
 
-namespace Laraspace\Providers;
+namespace euro_hms\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Laraspace\Services\TeamService;
-use Laraspace\Repositories\TeamRepository;
+use euro_hms\Services\TeamService;
+use euro_hms\Repositories\TeamRepository;
 
 class TeamServiceProvider extends ServiceProvider
 {
@@ -24,7 +24,7 @@ class TeamServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Laraspace\Contracts\TeamContract', function ($app) {
+        $this->app->bind('euro_hms\Contracts\TeamContract', function ($app) {
             return new TeamService(new TeamRepository());
         });
     }
@@ -36,6 +36,6 @@ class TeamServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Laraspace\Contracts\TeamContract'];
+        return ['euro_hms\Contracts\TeamContract'];
     }
 }

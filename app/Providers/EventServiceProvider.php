@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Providers;
+namespace euro_hms\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Laraspace\Events\SomeEvent' => [
-            'Laraspace\Listeners\EventListener',
+        'euro_hms\Events\SomeEvent' => [
+            'euro_hms\Listeners\EventListener',
         ],
     ];
 

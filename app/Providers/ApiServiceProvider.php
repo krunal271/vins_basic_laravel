@@ -1,9 +1,9 @@
 <?php
 
-namespace Laraspace\Providers;
+namespace euro_hms\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Laraspace\Services\ApiService;
+use euro_hms\Services\ApiService;
 
 class ApiServiceProvider extends ServiceProvider
 {
@@ -18,7 +18,7 @@ class ApiServiceProvider extends ServiceProvider
         //$app->bind('helloworld','App\Contracts\ApiContract');
         //$dispatcherObj = app('Dingo\Api\Dispatcher');
 
-        $this->app->bind('Laraspace\Contracts\ApiContract', function ($app) {
+        $this->app->bind('euro_hms\Contracts\ApiContract', function ($app) {
             return new ApiService();
         });
     }
@@ -39,6 +39,6 @@ class ApiServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Laraspace\Contracts\ApiContract'];
+        return ['euro_hms\Contracts\ApiContract'];
     }
 }

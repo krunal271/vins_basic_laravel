@@ -1,10 +1,10 @@
 <?php
 
-namespace Laraspace\Providers;
+namespace euro_hms\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Laraspace\Services\AgeGroupService;
-use Laraspace\Repositories\AgeGroupRepository;
+use euro_hms\Services\AgeGroupService;
+use euro_hms\Repositories\AgeGroupRepository;
 
 class AgeGroupServiceProvider extends ServiceProvider
 {
@@ -24,7 +24,7 @@ class AgeGroupServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Laraspace\Contracts\AgeGroupContract', function ($app) {
+        $this->app->bind('euro_hms\Contracts\AgeGroupContract', function ($app) {
             return new AgeGroupService(new AgeGroupRepository());
         });
     }
@@ -36,6 +36,6 @@ class AgeGroupServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Laraspace\Contracts\AgeContract'];
+        return ['euro_hms\Contracts\AgeContract'];
     }
 }

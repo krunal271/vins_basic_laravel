@@ -1,7 +1,7 @@
 <?php
-namespace Laraspace\Custom\Helper;
+namespace euro_hms\Custom\Helper;
 
-use Laraspace\Mail\SendMail;
+use euro_hms\Mail\SendMail;
 use Illuminate\Support\Facades\Mail;
 
 class Common {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Http\Middleware;
+namespace euro_hms\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

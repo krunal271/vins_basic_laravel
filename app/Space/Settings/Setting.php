@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Space\Settings;
+namespace euro_hms\Space\Settings;
 
 use Illuminate\Database\Eloquent\Model;
 

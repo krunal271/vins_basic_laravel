@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Http\Controllers;
+namespace euro_hms\Http\Controllers;
 
 use Brotzka\DotenvEditor\DotenvEditor;
 

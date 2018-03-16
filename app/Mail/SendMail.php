@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Mail;
+namespace euro_hms\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Laraspace\Http\Controllers;
+namespace euro_hms\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Laraspace\Contracts\ApiContract;
+use euro_hms\Contracts\ApiContract;
 
 class MatchController extends Controller
 {

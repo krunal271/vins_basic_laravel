@@ -1,8 +1,8 @@
 <?php
 
-namespace Laraspace\Http\Controllers\Auth;
+namespace euro_hms\Http\Controllers\Auth;
 
-use Laraspace\Http\Controllers\Controller;
+use euro_hms\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;

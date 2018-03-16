@@ -1,6 +1,6 @@
 <?php
 
-use Laraspace\Space\Settings\Setting;
+use euro_hms\Space\Settings\Setting;
 
 /**
  * Set Active Path

@@ -1,11 +1,11 @@
 <?php
 
-namespace Laraspace\Api\Repositories;
+namespace euro_hms\Api\Repositories;
 
-use Laraspace\Models\User;
-use Laraspace\Models\Role;
-use Laraspace\Models\UserFavourites;
-use Laraspace\Models\Settings;
+use euro_hms\Models\User;
+use euro_hms\Models\Role;
+use euro_hms\Models\UserFavourites;
+use euro_hms\Models\Settings;
 use DB;
 use Hash;
 
@@ -89,7 +89,7 @@ class UserRepository {
                 'Name', 'Surname' ,'Email address', 'User type', 'Status', 'Desktop', 'Mobile'
             ];
             //Total Stakes, Total Revenue, Amount & Balance fields are set as Number statically.
-            \Laraspace\Custom\Helper\Common::toExcel($lableArray,$dataArray,$otherParams,'xlsx','yes');
+            \euro_hms\Custom\Helper\Common::toExcel($lableArray,$dataArray,$otherParams,'xlsx','yes');
          }
 
          return  $user->get();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Http\Middleware;
+namespace euro_hms\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

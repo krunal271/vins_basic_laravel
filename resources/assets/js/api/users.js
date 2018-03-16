@@ -7,43 +7,173 @@ export default {
   getEditUser(id) {
   	return api.get('user/edit/'+id)
   },
- getRoles() {
-    return api.get('roles-for-select')
+  doctorInitialAssessment(sendData) {
+    return api.get('DoctorsInitialAssessment')
   },
-  getRolesWithData() {
-    return api.get('roles')
+  savePatient(patientData) {
+    return api.post('patient/create',{'patientData': patientData})
   },
-  getUsersByRegisterType(param) {
-    return api.post('users/getUsersByRegisterType',param)
+  saveAdverseDrugReaction(adverseDrugReaction) {
+    return api.post('adverseDrugReaction/create',{'adverseDrugReaction': adverseDrugReaction})
+  },
+  saveAppointmentBook(appointmentBook) {
+    return api.post('appointmentBook/create',{'appointmentBook': appointmentBook})
+  },
+  saveBloodSugarMonitoringChart(bloodSugarMonitoringChart) {
+    return api.post('bloodSugarMonitoringChart/create',{'bloodSugarMonitoringChart': bloodSugarMonitoringChart})
+  },
+  saveBloodTransfusion(bloodTransfusionDetails) {
+    return api.post('bloodTransfusionDetails/create',{'bloodTransfusionDetails': bloodTransfusionDetails})
+  },
+  saveBreifOperativeNote(breifOperativeNoteData) {
+    return api.post('briefOperativeNote/create',{'breifOperativeNoteData': breifOperativeNoteData})
+  },
+  testFunction(testData) {
+    return api.post('testFile/create',{'testData': testData})
+  },
+  saveCodeBlueEvaluationForm(codeBlueEvaluationData) {
+    return api.post('codeBlueEvaluationForm/create',{'codeBlueEvaluationData': codeBlueEvaluationData})
+  },
+  saveCompleteNursingAssessment(completeNursingAssessmentData) {
+    return api.post('completeNursingAssessment/create',{'completeNursingAssessmentData': completeNursingAssessmentData})
+  },
+  saveCounsellingForm(counsellingFormData) {
+    return api.post('counsellingForm/create',{'counsellingFormData': counsellingFormData})
+  },
+  saveCprFormat(cprFormatData) {
+    return api.post('cprFormat/create',{'cprFormatData': cprFormatData})
+  },
+  saveCultureBiopsy(cultureBiopsyData) {
+    return api.post('cultureBiopsyForm/create',{'cultureBiopsyData': cultureBiopsyData})
+  },
+  saveDailyDietForm(dailyDietData) {
+    return api.post('dailyDietForm/create',{'dailyDietData': dailyDietData})
+  },
+  saveDischargeGatepass(dischargeGatepassData) {
+    return api.post('dischargeGatepass/create',{'dischargeGatepassData': dischargeGatepassData})
+  },
+  saveDischargeSummary(dischargeSummaryData) {
+    return api.post('dischargeSummary/create',{'dischargeSummaryData': dischargeSummaryData})
+  },
+  saveDoctorsDailyNotes(doctorsDailyNotesData) {
+    return api.post('doctorsDailyNotes/create',{'doctorsDailyNotesData': doctorsDailyNotesData})
+  },
+  saveSurgicalSafetyChecklist(surgicalSafetyChecklistData) {
+    return api.post('surgicalSafetyChecklist/create',{'surgicalSafetyChecklistData': surgicalSafetyChecklistData})
+  },
+  saveLabSheet(LabSheet) {
+    return api.post('LabSheet/create',{'LabSheet':LabSheet})
   },
 
-  getUserTableData(param) {
-    return api.get('users/getUserTableData?=report_download=yes&registerType=desktop')
+  saveNurseProgressNotes(NurseProgressNotes) {
+    return api.post('NurseProgressNotes/create',{'NurseProgressNotes':NurseProgressNotes})
   },
 
-  // getUserReportData() {
-  //     return api.get('users/getUsersByRegisterType/generate?'+ data)
-  // },
+  saveNursingDutyOver(NursingDutyOver) {
+    return api.post('NursingDutyOver/create',{'NursingDutyOver':NursingDutyOver})
+  },
 
-  createUser(formData) {
-    return api.post('user/create',formData)
+  saveNutritionalAssessmentForm(NutritionalAssessmentForm) {
+    return api.post('NutritionalAssessmentForm/create',{'NutritionalAssessmentForm':NutritionalAssessmentForm})
   },
-  updateUser(userId,formData) {
-    return api.post('user/update/'+userId,formData)
+
+  saveNutritionalScreeningForm(NutritionalScreeningForm) {
+    return api.post('NutritionalScreeningForm/create',{'NutritionalScreeningForm':NutritionalScreeningForm})
   },
-  resendEmail(emailData) {
-    return api.post('user/resendEmail',emailData)
+
+  saveOperativeDetailSheet(OperativeDetailSheet) {
+    return api.post('OperativeDetailSheet/create',{'OperativeDetailSheet':OperativeDetailSheet})
   },
-  changeStatus(userData) {
-    return api.post('user/status',userData)
+
+  savePatientAdmissionSheet(PatientAdmissionSheet) {
+    return api.post('PatientAdmissionSheet/create',{'PatientAdmissionSheet':PatientAdmissionSheet})
   },
-  deleteUser(deleteUrl) {
-    return api.post(deleteUrl)
+
+  savePatientDietRecord(PatientDietRecord) {
+    return api.post('PatientDietRecord/create',{'PatientDietRecord':PatientDietRecord})
   },
-  changeTournamentPermission(permissionData) {
-    return api.post('user/changeTournamentPermission', permissionData)
+
+  savePatientValuableForm(PatientValuableForm) {
+    return api.post('PatientValuableForm/create',{'PatientValuableForm':PatientValuableForm})
   },
-  getUserTournaments(userId) {
-    return api.get('user/getUserTournaments/' + userId)
+
+  savePhysiotherapyAssessment(PhysiotherapyAssessment) {
+    return api.post('PhysiotherapyAssessment/create',{'PhysiotherapyAssessment':PhysiotherapyAssessment})
   },
+
+  saveRestraintAdministration(RestraintAdministration) {
+    return api.post('RestraintAdministration/create',{'RestraintAdministration':RestraintAdministration})
+  },
+  savePlanOfCare(planOfCareData) {
+    return api.post('planOfCare/create',{'planOfCareData': planOfCareData})
+  },
+  savePreAnaesthesiaCheckupForm(preAnaesthesiaCheckupFormData) {
+    return api.post('preAnaesthesiaCheckupForm/create',{'preAnaesthesiaCheckupFormData': preAnaesthesiaCheckupFormData})
+  },
+  savePostAnaesthesiaEvaluation(postAnaesthesiaEvaluationData) {
+    return api.post('postAnaesthesiaEvaluation/create',{'postAnaesthesiaEvaluationData': postAnaesthesiaEvaluationData})
+  },
+  savePreAngiographyAngioplastyChecklist(preAngiographyAngioplastyChecklistData) {
+    return api.post('preAngiographyAngioplastyChecklist/create',{'preAngiographyAngioplastyChecklistData': preAngiographyAngioplastyChecklistData})
+  },
+  savePreOTChecklist(preOTChecklistData) {
+    return api.post('savePreOTChecklist/create',{'preOTChecklistData': preOTChecklistData})
+  },
+  saveProvisionalDischargeSummary(provisionalDischargeSummaryData) {
+    return api.post('provisionalDischargeSummary/create',{'provisionalDischargeSummaryData': provisionalDischargeSummaryData})
+  },
+  saveRadiologyRequisition(radiologyRequisitionData) {
+    return api.post('radiologyRequisition/create',{'radiologyRequisitionData': radiologyRequisitionData})
+  },
+  saveTransferChecklistForNurses(transferChecklistForNursesData) {
+    return api.post('transferChecklistForNurses/create',{'transferChecklistForNursesData': transferChecklistForNursesData})
+  },
+  saveTransfusionReactionForm(transfusionReactionFormData) {
+    return api.post('transfusionReactionForm/create',{'transfusionReactionFormData': transfusionReactionFormData})
+  },
+  saveVentilatorChargeSheet(ventilatorChargeSheetData) {
+    return api.post('ventilatorChargeSheet/create',{'ventilatorChargeSheetData': ventilatorChargeSheetData})
+  },
+  saveWardProcedureRecord(wardProcedureRecordData) {
+    return api.post('wardProcedureRecord/create',{'wardProcedureRecordData': wardProcedureRecordData})
+  },
+  saveDoctorsHandover(doctorsHandoverData) {
+    return api.post('doctorsHandover/create',{'doctorsHandoverData': doctorsHandoverData})
+  },
+  saveDrugRequisition(drugRequisitionData) {
+    return api.post('drugRequisition/create',{'drugRequisitionData': drugRequisitionData})
+  },
+  saveerObservation(erObservationData) {
+    return api.post('erObservation/create',{'erObservationData': erObservationData})
+  },
+  savegatePass(gatePassData) {
+    return api.post('gatePass/create',{'gatePassData': gatePassData})
+  },
+  saveglassGow(glassGow) {
+    return api.post('glassGow/create',{'glassGow': glassGowData})
+  },
+  saveglassGow(historyForm) {
+    return api.post('historyForm/create',{'historyForm': historyFormData})
+  },
+
+  saveInformationForm(informationForm) {
+    return api.post('informationForm/create',{'informationForm': informationFormData})
+  },
+  saveinfusionTherapyChart(infusionTherapyChart) {
+    return api.post('infusionTherapyChart/create',{'infusionTherapyChart': infusionTherapyChartData})
+  },
+  saveinvestigationSheet(investigationSheet) {
+    return api.post('investigationSheet/create',{'investigationSheet': investigationSheetData})
+  },
+  saveMARFlowSheet(MARFlowSheet) {
+    return api.post('MARFlowSheet/create',{'MARFlowSheet': MARFlowSheet})
+  },
+  saveMARFlowSheet(MARFlowSheet) {
+    return api.post('MARFlowSheet/create',{'MARFlowSheet': MARFlowSheet})
+  },
+    getpatientDetail(ipdId) {
+    return api.post('patient/getDetails/'+ipdId)
+  },
+
+
 }

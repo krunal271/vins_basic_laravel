@@ -1,8 +1,8 @@
 <?php
 
-namespace Laraspace\Http\Requests;
+namespace euro_hms\Http\Requests;
 
-use Laraspace\Http\Requests\Request;
+use euro_hms\Http\Requests\Request;
 
 class SocialSettingsRequest extends Request
 {

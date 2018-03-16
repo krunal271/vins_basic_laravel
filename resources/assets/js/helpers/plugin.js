@@ -34,6 +34,9 @@ export default {
             minimumResultsForSearch: Infinity
         });
     },
+    DatePicker(){
+        $('.ls-datepicker').datepicker({autoclose: true});
+    },
     BootstrapSelect(){
         $(".ls-bootstrap-select").selectpicker({
             iconBase: 'fa',

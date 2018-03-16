@@ -1,11 +1,11 @@
 <?php
 
-namespace Laraspace\Http\Controllers;
+namespace euro_hms\Http\Controllers;
 
 use Illuminate\Http\Request;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
-use Laraspace\Models\Settings;
+use euro_hms\Models\Settings;
 
 class AuthController extends Controller
 {
@@ -69,7 +69,7 @@ class AuthController extends Controller
           //if($userData->is_mobile_user == 1) {
 
             $path = getenv('S3_URL').'/assets/img/users/';
-            $userDataQuery = \Laraspace\Models\User::where('users.id',$userData->id)
+            $userDataQuery = \euro_hms\Models\User::where('users.id',$userData->id)
                               ->leftJoin('users_favourite','users_favourite.user_id','=','users.id')
                               ->leftJoin('people','people.id','=','users.person_id')
                               ->select('users.id',
@@ -101,7 +101,7 @@ class AuthController extends Controller
 
             //echo '<pre>';
             //print_r($userData->personDetail->id);exit;
-            //$userInfo = \Laraspace\Models\Person::where('id',$userData->person_id)->get();
+            //$userInfo = \euro_hms\Models\Person::where('id',$userData->person_id)->get();
             //$userData['first_name'] = $userInfo[0]['first_name'];
             //print_r($userInfo[0]);exit;
             //return response(['authenticated' => true,'userData'=>$userData]);

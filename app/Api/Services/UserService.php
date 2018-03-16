@@ -1,28 +1,28 @@
 <?php
 
-namespace Laraspace\Api\Services;
+namespace euro_hms\Api\Services;
 
 
 use DB;
-use Laraspace\Api\Contracts\UserContract;
+use euro_hms\Api\Contracts\UserContract;
 use Validator;
 use Illuminate\Support\Facades\Password;
-use Laraspace\Custom\Helper\Common;
+use euro_hms\Custom\Helper\Common;
 use Illuminate\Mail\Message;
-use Laraspace\Models\User;
-use Laraspace\Models\Role;
+use euro_hms\Models\User;
+use euro_hms\Models\Role;
 use Hash;
 
 use App\Mail\SendMail;
 use Illuminate\Support\Facades\Mail;
-use Laraspace\Models\UserFavourites;
+use euro_hms\Models\UserFavourites;
 
 class UserService implements UserContract
 {
     public function __construct()
     {
-        $this->userRepoObj = new \Laraspace\Api\Repositories\UserRepository();
-        $this->peopleRepoObj = new \Laraspace\Api\Repositories\PeopleRepository();
+        $this->userRepoObj = new \euro_hms\Api\Repositories\UserRepository();
+        $this->peopleRepoObj = new \euro_hms\Api\Repositories\PeopleRepository();
         $this->s3  = \Storage::disk('s3');
         $this->getAWSUrl = getenv('S3_URL');
     }

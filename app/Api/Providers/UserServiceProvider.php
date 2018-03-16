@@ -1,9 +1,9 @@
 <?php
 
-namespace Laraspace\Api\Providers;
+namespace euro_hms\Api\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Laraspace\Api\Services\UserService;
+use euro_hms\Api\Services\UserService;
 
 class UserServiceProvider extends ServiceProvider
 {
@@ -30,7 +30,7 @@ class UserServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Laraspace\Api\Contracts\UserContract', function ($app) {
+        $this->app->bind('euro_hms\Api\Contracts\UserContract', function ($app) {
             return new UserService();
         });
     }
@@ -42,6 +42,6 @@ class UserServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Laraspace\Api\Contracts\UserContract'];
+        return ['euro_hms\Api\Contracts\UserContract'];
     }
 }

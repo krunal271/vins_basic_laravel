@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace;
+namespace euro_hms;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;

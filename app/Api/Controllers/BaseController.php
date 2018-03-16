@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Api\Controllers;
+namespace euro_hms\Api\Controllers;
 
 use Dingo\Api\Routing\Helpers;
 use Illuminate\Routing\Controller;

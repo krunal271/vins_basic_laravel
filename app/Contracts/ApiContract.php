@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Contracts;
+namespace euro_hms\Contracts;
 
 interface ApiContract
 {

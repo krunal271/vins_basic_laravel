@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Providers;
+namespace euro_hms\Providers;
 
 use URL;
 use Illuminate\Support\ServiceProvider;

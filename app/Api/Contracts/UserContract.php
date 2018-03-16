@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Api\Contracts;
+namespace euro_hms\Api\Contracts;
 
 interface UserContract
 {

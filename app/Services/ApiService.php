@@ -1,8 +1,8 @@
 <?php
 
-namespace Laraspace\Services;
+namespace euro_hms\Services;
 
-use Laraspace\Contracts\ApiContract;
+use euro_hms\Contracts\ApiContract;
 use Dingo\Api\Routing\Helpers;
 
 class ApiService implements ApiContract

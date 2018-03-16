@@ -1,6 +1,6 @@
 <?php
 
-namespace Laraspace\Http\Requests;
+namespace euro_hms\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

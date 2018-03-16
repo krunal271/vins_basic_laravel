@@ -1,13 +1,13 @@
 <?php
 
-namespace Laraspace\Http\Controllers\Demo;
+namespace euro_hms\Http\Controllers\Demo;
 
 use Illuminate\Http\Request;
 
 use Illuminate\View\View;
-use Laraspace\Http\Requests;
-use Laraspace\Http\Controllers\Controller;
-use Laraspace\Space\Demo\Todo;
+use euro_hms\Http\Requests;
+use euro_hms\Http\Controllers\Controller;
+use euro_hms\Space\Demo\Todo;
 
 class TodosController extends Controller
 {
